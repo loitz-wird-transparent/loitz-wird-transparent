@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, 
+        user-scalable=0">
+        <title>Loitz wird transparent</title>
+        <link href="assets/app.css" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <script src="https://unpkg.com/@barba/core"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    </head>
+    <body data-barba="wrapper">
+        <main data-barba="container" data-barba-namespace="container">
+        
+            <div id="overlay">Loitz wird transparent</div>
+            <div class="content">
+            <nav>
+                <a href="#">Informationen</a>
+                <a href="#">Zum Portal</a>
+                <a href="#">Kontakt</a>
+            </nav>
+            <div class="grid">
+                
+                <div class="intro">
+                    <h1>Worum geht es?</h1>
+                    <div class="copy">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                    </div>
+        
+                </div>
+
+                <div class="intro">
+                    <h1>Was ist das Ziel?</h1>
+                    <div class="copy">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                    </div>
+        
+                </div>
+
+                <div class="intro">
+                    <h1>Wozu der ganze Aufwand?</h1>
+                    <div class="copy">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                    </div>
+        
+                </div>
+                
+            </div>
+            
+            <footer>
+                <a>Diese Kampagne kostete uns bisher <span style="font-weight: 600;">56,14€</span>. Eine genaue Aufschlüsselung findest du <a style="text-decoration: underline; color: #000;" href="informationen.html">hier</a>.</a>
+            </footer>
+        </div>
+        </main>
+
+        <script src="assets/app.js"></script>
+        <script>
+
+(function(){
+	
+	var titleElem = document.querySelector("#overlay");
+	
+	function mousemoveHandler(e){
+		var mousePos = (e.clientX / window.innerWidth * .5) - 1;
+		var mousePos2 = (e.clientX / window.innerWidth * 2) - 1;
+		titleElem.style.transform = "skew("+mousePos * mousePos2 * 5+"deg, "+mousePos * mousePos2 * 5+"deg)";
+	}
+	
+	window.addEventListener("mousemove", mousemoveHandler);
+	
+	
+}())
+
+        </script>
+
+    </body>
+</html>
