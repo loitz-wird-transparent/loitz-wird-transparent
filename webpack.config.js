@@ -27,6 +27,9 @@ module.exports = (env, argv) => ({
         }, {
           from: 'src/images/*',
           to: 'images/[name].[ext]',
+        }, {
+          from: 'src/fonts/*',
+          to: 'fonts/[name].[ext]',
         }],
       }),
     ],
